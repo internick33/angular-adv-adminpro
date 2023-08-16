@@ -7,12 +7,13 @@ import { Grafica1Component } from "./grafica1/grafica1.component";
 
 const routes: Routes = [
     { 
-        path: 'dashboard', 
+        path: '', 
         component: PagesComponent,
         children: [
-          { path: '', component: DashboardComponent},
+          { path: 'dashboard', component: DashboardComponent},
           { path: 'progress', component: ProgressComponent },
           { path: 'grafica1', component: Grafica1Component },
+          { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
         ]
     },
 ]
